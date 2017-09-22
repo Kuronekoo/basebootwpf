@@ -10,3 +10,4 @@ D:\wpfspace\basebootwpf\basebootwpf\obj\Debug\basebootwpf.Properties.Resources.r
 D:\wpfspace\basebootwpf\basebootwpf\obj\Debug\basebootwpf.csproj.GenerateResource.Cache
 D:\wpfspace\basebootwpf\basebootwpf\obj\Debug\basebootwpf.exe
 D:\wpfspace\basebootwpf\basebootwpf\obj\Debug\basebootwpf.pdb
+D:\wpfspace\basebootwpf\basebootwpf\obj\Debug\basebootwpf.csprojResolveAssemblyReference.cache
