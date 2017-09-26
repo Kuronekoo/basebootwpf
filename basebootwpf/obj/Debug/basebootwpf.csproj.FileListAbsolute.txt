@@ -10,4 +10,8 @@ D:\wpfspace\basebootwpf\basebootwpf\obj\Debug\basebootwpf.Properties.Resources.r
 D:\wpfspace\basebootwpf\basebootwpf\obj\Debug\basebootwpf.csproj.GenerateResource.Cache
 D:\wpfspace\basebootwpf\basebootwpf\obj\Debug\basebootwpf.exe
 D:\wpfspace\basebootwpf\basebootwpf\obj\Debug\basebootwpf.pdb
+D:\wpfspace\basebootwpf\basebootwpf\obj\Debug\DbWindow.baml
+D:\wpfspace\basebootwpf\basebootwpf\obj\Debug\DbWindow.g.cs
 D:\wpfspace\basebootwpf\basebootwpf\obj\Debug\basebootwpf.csprojResolveAssemblyReference.cache
+D:\wpfspace\basebootwpf\basebootwpf\obj\Debug\StartUpWindow.baml
+D:\wpfspace\basebootwpf\basebootwpf\obj\Debug\StartUpWindow.g.cs

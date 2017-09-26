@@ -60,13 +60,11 @@ namespace basebootwpf
 
             p.WaitForExit();  // 等待退出
             MessageBox.Show("生成完成");
+            this.Hide();
+            DbWindow dbWindow = new DbWindow(projectname);
+            dbWindow.Show();
 
         }
 
-
-        private void Button_click(Object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("hi,lipeng");
-        }
     }
 }

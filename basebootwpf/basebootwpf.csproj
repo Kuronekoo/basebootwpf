@@ -55,15 +55,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
+    <Compile Include="StartUpWindow.xaml.cs">
+      <DependentUpon>StartUpWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Window1.xaml.cs">
-      <DependentUpon>Window1.xaml</DependentUpon>
-    </Compile>
+    <Page Include="DbWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -72,11 +70,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DbWindow.xaml.cs">
+      <DependentUpon>DbWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Window1.xaml">
+    <Page Include="StartUpWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
