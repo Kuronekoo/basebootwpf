@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="BaseBootV1.0" Height="350" Width="525">
     <Grid>
-        <Label Content="mysql安装路径:" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top"/>
+        <Label Content="mysql路径:" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top"/>
         <Label Content="数据库主机:" HorizontalAlignment="Left" Margin="20,60,0,0" VerticalAlignment="Top"/>
         <Label Content="账号:" HorizontalAlignment="Left" Margin="20,100,0,0" VerticalAlignment="Top"/>
         <Label Content="密码:" HorizontalAlignment="Left" Margin="20,140,0,0" VerticalAlignment="Top"/>
@@ -23,7 +23,7 @@
         <Label Content="如root" HorizontalAlignment="Left" Margin="220,100,0,0" VerticalAlignment="Top"/>
         <Label Content="" HorizontalAlignment="Left" Margin="220,140,0,0" VerticalAlignment="Top"/>
         <Label Content="" HorizontalAlignment="Left" Margin="220,180,0,0" VerticalAlignment="Top"/>
-        <RichTextBox Name="richTextBox1" HorizontalAlignment="Left" Height="177" Margin="308,133,0,0" VerticalAlignment="Top" Width="164">
+        <RichTextBox Name="richTextBox1" HorizontalAlignment="Left" Height="191" Margin="305,62,0,0" VerticalAlignment="Top" Width="164">
             <FlowDocument>
                 <Paragraph>
                     <Run Text=""/>
