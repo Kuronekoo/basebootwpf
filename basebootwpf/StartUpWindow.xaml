@@ -3,7 +3,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="StartUpWindow" Height="300" Width="300">
     <Grid>
-        <Button Content="启动系统" HorizontalAlignment="Left" Margin="99,132,0,0" VerticalAlignment="Top" Width="75" Click="StartUp_Click"/>
-
+        <Button Content="启动系统" HorizontalAlignment="Left" Margin="103,25,0,0" VerticalAlignment="Top" Width="75" Click="StartUp_Click"/>
+        <RichTextBox Name="richTextBox1" HorizontalAlignment="Left" Height="83" Margin="42,68,0,0" VerticalAlignment="Top" Width="210">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Label Content="地址：http://localhost:8080" HorizontalAlignment="Left" Margin="56,163,0,0" VerticalAlignment="Top" Width="167" Height="26"/>
+        <Label Content="账号：admin" HorizontalAlignment="Left" Margin="57,188,0,0" VerticalAlignment="Top" Width="167" Height="26"/>
+        <Label Content="密码：admin!@#" HorizontalAlignment="Left" Margin="57,214,0,0" VerticalAlignment="Top" Width="167" Height="26"/>
     </Grid>
 </Window>
