@@ -29,10 +29,14 @@ namespace basebootwpf
         {
             this.projectname = projectname;
             InitializeComponent();
+            nextBtn.IsEnabled = false;
         }
 
         private void ImportSQL_Click(object sender, EventArgs e)
         {
+
+            importBtn.IsEnabled = false;
+            nextBtn.IsEnabled = false;
 
             String path = this.path.Text;
             String host = this.host.Text;
@@ -50,6 +54,13 @@ namespace basebootwpf
             p.StartInfo.UseShellExecute = false; // 不调用系统的Shell
             p.StartInfo.RedirectStandardError = true; // 重定向Error
             p.StartInfo.CreateNoWindow = true; //不创建窗口
+
+            p.OutputDataReceived += new DataReceivedEventHandler(p_OutputDataReceived);
+            p.ErrorDataReceived += new DataReceivedEventHandler(p_ErrorDataReceived);
+
+            p.EnableRaisingEvents = true;                      // 启用Exited事件  
+            p.Exited += CmdProcess_Exited;   // 注册进程结束事件
+
             p.Start(); // 启动进程
             p.StandardInput.WriteLine("cd "+projectname); // Cmd 命令
 
@@ -61,22 +72,60 @@ namespace basebootwpf
 
             p.StandardInput.WriteLine("exit"); // 退出
 
-            string s = p.StandardOutput.ReadToEnd(); //将输出赋值给 S
+            p.BeginOutputReadLine();
+            p.BeginErrorReadLine();
+                   
+        }
 
-            this.richTextBox1.Document.Blocks.Clear();
-
-            Paragraph para = new Paragraph();
-            Run r = new Run(s);
-            para.Inlines.Add(r);
-            this.richTextBox1.Document.Blocks.Add(para);
-
-            p.WaitForExit();  // 等待退出
-            MessageBox.Show("导入完成");
+        private void Next_Click(object sender, EventArgs e)
+        {
             this.Hide();
             StartUpWindow startUpWindow = new StartUpWindow(projectname);
             startUpWindow.Show();
-                    
         }
+
+        private void p_OutputDataReceived(object sender, DataReceivedEventArgs e)
+        {
+            Console.WriteLine("Output:" + e.Data);
+            Dispatcher.Invoke(() =>
+            {
+                this.richTextBox1.Document.Blocks.Clear();
+                this.richTextBox1.AppendText(e.Data + "\r\n");
+                this.richTextBox1.ScrollToEnd();
+                this.richTextBox1.Focus();
+            });
+        }
+
+
+        private void p_ErrorDataReceived(object sender, DataReceivedEventArgs e)
+        {
+            Console.WriteLine("Error:" + e.Data);
+            Dispatcher.Invoke(() =>
+            {
+                this.richTextBox1.Document.Blocks.Clear();
+                this.richTextBox1.AppendText(e.Data + "\r\n");
+                this.richTextBox1.ScrollToEnd();
+                this.richTextBox1.Focus();
+            });
+        }
+
+
+        private void CmdProcess_Exited(object sender, EventArgs e)
+        {
+            Console.WriteLine("CmdProcess_Exited");
+            Dispatcher.Invoke(() =>
+            {
+                this.nextBtn.IsEnabled = true;
+                this.importBtn.IsEnabled = true;
+                this.richTextBox1.AppendText("导入完成");
+                this.richTextBox1.ScrollToEnd();
+                this.richTextBox1.Focus();
+            });
+
+            MessageBox.Show("导入完成");
+        }  
+
+
 
         private void UpdatePom(String projectname,String host,String username,String password,String port)
         {

@@ -25,14 +25,14 @@
         <Label Content="如demo" HorizontalAlignment="Left" Margin="220,180,0,0" VerticalAlignment="Top"/>
         <Label Content="如crv" HorizontalAlignment="Left" Margin="220,220,0,0" VerticalAlignment="Top"/>
 
-        <RichTextBox Name="richTextBox1" HorizontalAlignment="Left" Height="52" Margin="28,254,0,0" VerticalAlignment="Top" Width="361" RenderTransformOrigin="0.5,0.5">
+        <RichTextBox Name="richTextBox1" IsReadOnly  = "true" HorizontalAlignment="Left" Height="52" Margin="28,254,0,0" VerticalAlignment="Top" Width="361" RenderTransformOrigin="0.5,0.5">
             <FlowDocument>
                 <Paragraph>
                     <Run Text=""/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <Button Name="dbBtn" Content="数据库设置" HorizontalAlignment="Left" Margin="403,273,0,0" VerticalAlignment="Top" Width="75" Click="Db_Click"/>
+        <Button Name="dbBtn" Content="下一步" HorizontalAlignment="Left" Margin="403,273,0,0" VerticalAlignment="Top" Width="75" Click="Db_Click"/>
 
     </Grid>
 </Window>

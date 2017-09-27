@@ -112,6 +112,9 @@ namespace basebootwpf
             {
                 this.dbBtn.IsEnabled = true;
                 this.genBtn.IsEnabled = true;
+                this.richTextBox1.AppendText("生成完成");
+                this.richTextBox1.ScrollToEnd();
+                this.richTextBox1.Focus();
             });
 
             MessageBox.Show("生成完成");

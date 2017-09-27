@@ -16,19 +16,20 @@
         <TextBox Name="password" HorizontalAlignment="Left" Height="23" Margin="100,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox Name="port" HorizontalAlignment="Left" Height="23" Margin="100,180,0,0" TextWrapping="Wrap" Text="3306" VerticalAlignment="Top" Width="120"/>
 
-        <Button Content="导入数据库" HorizontalAlignment="Left" Margin="20,229,0,0" VerticalAlignment="Top" Width="75" Click="ImportSQL_Click"/>
+        <Button Name="importBtn" Content="导入数据库" HorizontalAlignment="Left" Margin="389,180,0,0" VerticalAlignment="Top" Width="75" Click="ImportSQL_Click"/>
 
         <Label Content="如C:\Program Files\MySQL\MySQL Server 5.7" HorizontalAlignment="Left" Margin="220,20,0,0" VerticalAlignment="Top"/>
         <Label Content="如localhost" HorizontalAlignment="Left" Margin="220,60,0,0" VerticalAlignment="Top"/>
         <Label Content="如root" HorizontalAlignment="Left" Margin="220,100,0,0" VerticalAlignment="Top"/>
         <Label Content="" HorizontalAlignment="Left" Margin="220,140,0,0" VerticalAlignment="Top"/>
         <Label Content="" HorizontalAlignment="Left" Margin="220,180,0,0" VerticalAlignment="Top"/>
-        <RichTextBox Name="richTextBox1" HorizontalAlignment="Left" Height="191" Margin="305,62,0,0" VerticalAlignment="Top" Width="164">
+        <RichTextBox Name="richTextBox1" HorizontalAlignment="Left" Height="38" Margin="22,265,0,0" VerticalAlignment="Top" Width="334">
             <FlowDocument>
                 <Paragraph>
                     <Run Text=""/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
+        <Button Name="nextBtn" Content="下一步" HorizontalAlignment="Left" Margin="393,274,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.293,0.409" Click="Next_Click"/>
     </Grid>
 </Window>
