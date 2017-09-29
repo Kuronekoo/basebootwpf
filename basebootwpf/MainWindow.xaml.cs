@@ -44,7 +44,6 @@ namespace basebootwpf
             Process p = new Process();  // 初始化新的进程
 
             p.StartInfo.FileName = "cmd.exe";      // 命令  
-            p.StartInfo.Arguments = "www.baidu.com";      // 参数  
 
             p.StartInfo.RedirectStandardInput = true; //重定向输入
             p.StartInfo.RedirectStandardOutput = true;//重定向输出
@@ -59,6 +58,7 @@ namespace basebootwpf
             p.Exited += CmdProcess_Exited;   // 注册进程结束事件
 
             p.Start(); // 启动进程
+            p.StandardInput.WriteLine("rd/s/q " + projectname); // Cmd 命令
             String cmd = "mvn archetype:generate -B -U -DarchetypeGroupId=com.shurrik -DarchetypeArtifactId=baseboot -DarchetypeRepository=local -DarchetypeVersion=1.0-SNAPSHOT -DgroupId=" + groupId + " -DartifactId=" + artifactId + " -Dversion=" + version + " -Dpackage=" + package + " -Dproject_name=" + projectname + " -Dcorp=" + corp + " -DinteractiveMode=false -X -DarchetypeCatalog=local";
             p.StandardInput.WriteLine(cmd); // Cmd 命令
             p.StandardInput.WriteLine("exit");

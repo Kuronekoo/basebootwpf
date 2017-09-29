@@ -3,6 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="BaseBootV1.0" Height="350" Width="525" WindowStartupLocation="CenterScreen">
     <Grid>
+
+        <!--<TextBox Height="32" HorizontalAlignment="Left" Margin="6,10,0,0" Name="FileNameTextBox" 
+                 VerticalAlignment="Top" Width="393" />
+        <Button Content="Browse" Height="32" HorizontalAlignment="Left" Margin="405,10,0,0" 
+                Name="button1" VerticalAlignment="Top" Width="88" Click="button1_Click" />-->
+
         <Label Content="mysql路径:" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top"/>
         <Label Content="数据库主机:" HorizontalAlignment="Left" Margin="20,60,0,0" VerticalAlignment="Top"/>
         <Label Content="账号:" HorizontalAlignment="Left" Margin="20,100,0,0" VerticalAlignment="Top"/>
@@ -18,7 +24,7 @@
 
         <Button Name="importBtn" Content="导入数据库" HorizontalAlignment="Left" Margin="389,180,0,0" VerticalAlignment="Top" Width="75" Click="ImportSQL_Click"/>
 
-        <Label Content="如C:\Program Files\MySQL\MySQL Server 5.7" HorizontalAlignment="Left" Margin="220,20,0,0" VerticalAlignment="Top"/>
+        <!--<Label Content="如C:\Program Files\MySQL\MySQL Server 5.7" HorizontalAlignment="Left" Margin="220,20,0,0" VerticalAlignment="Top"/>-->
         <Label Content="如localhost" HorizontalAlignment="Left" Margin="220,60,0,0" VerticalAlignment="Top"/>
         <Label Content="如root" HorizontalAlignment="Left" Margin="220,100,0,0" VerticalAlignment="Top"/>
         <Label Content="" HorizontalAlignment="Left" Margin="220,140,0,0" VerticalAlignment="Top"/>
@@ -31,5 +37,6 @@
             </FlowDocument>
         </RichTextBox>
         <Button Name="nextBtn" Content="下一步" HorizontalAlignment="Left" Margin="393,274,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.293,0.409" Click="Next_Click"/>
+        <Button Content="pathBtn" HorizontalAlignment="Left" Margin="231,20,0,0" VerticalAlignment="Top" Width="75" Click="Path_Click"/>
     </Grid>
 </Window>

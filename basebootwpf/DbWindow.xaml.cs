@@ -63,7 +63,6 @@ namespace basebootwpf
 
             p.Start(); // 启动进程
             p.StandardInput.WriteLine("cd "+projectname); // Cmd 命令
-
             p.StandardInput.WriteLine("mysql -h "+host+" -P "+port+" -u" + username + " -p" + password + " -e \"create database "+projectname+";\"");
             p.StandardInput.WriteLine("mysql -h "+host+" -P "+port+" -u" + username + " -p" + password + " " + projectname + "<sys.sql");
             p.StandardInput.WriteLine("@echo init success!");
@@ -155,6 +154,18 @@ namespace basebootwpf
                 }
             }
             xmlDoc.Save(projectname + "/" + projectname + "-web/pom.xml");
+        }
+
+        private void Path_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.FolderBrowserDialog fd = new System.Windows.Forms.FolderBrowserDialog();
+
+            System.Windows.Forms.DialogResult result = fd.ShowDialog();
+            if (result == System.Windows.Forms.DialogResult.OK)
+            {
+                this.path.Text = fd.SelectedPath;
+            }     
+
         }
     }
 }
