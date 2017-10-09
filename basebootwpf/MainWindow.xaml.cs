@@ -37,8 +37,10 @@ namespace basebootwpf
             String groupId = this.groupId.Text;
             String artifactId = this.artifactId.Text;
             String version = this.version.Text;
-            String package = this.package.Text;
-            String projectname = this.projectname.Text;
+            //String package = this.package.Text;
+            //String projectname = this.projectname.Text;
+            String package = groupId;
+            String projectname = artifactId;
             String corp = this.corp.Text;
 
             Process p = new Process();  // 初始化新的进程
@@ -75,7 +77,7 @@ namespace basebootwpf
         private void Db_Click(object sender, EventArgs e)
         {
             this.Hide();
-            DbWindow dbWindow = new DbWindow(this.projectname.Text);
+            DbWindow dbWindow = new DbWindow(this.artifactId.Text);
             dbWindow.Show();
         }
 

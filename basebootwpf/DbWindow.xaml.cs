@@ -38,7 +38,7 @@ namespace basebootwpf
             importBtn.IsEnabled = false;
             nextBtn.IsEnabled = false;
 
-            String path = this.path.Text;
+            //String path = this.path.Text;
             String host = this.host.Text;
             String username = this.username.Text;
             String password = this.password.Text;
@@ -156,16 +156,16 @@ namespace basebootwpf
             xmlDoc.Save(projectname + "/" + projectname + "-web/pom.xml");
         }
 
-        private void Path_Click(object sender, EventArgs e)
-        {
-            System.Windows.Forms.FolderBrowserDialog fd = new System.Windows.Forms.FolderBrowserDialog();
+        //private void Path_Click(object sender, EventArgs e)
+        //{
+        //    System.Windows.Forms.FolderBrowserDialog fd = new System.Windows.Forms.FolderBrowserDialog();
 
-            System.Windows.Forms.DialogResult result = fd.ShowDialog();
-            if (result == System.Windows.Forms.DialogResult.OK)
-            {
-                this.path.Text = fd.SelectedPath;
-            }     
+        //    System.Windows.Forms.DialogResult result = fd.ShowDialog();
+        //    if (result == System.Windows.Forms.DialogResult.OK)
+        //    {
+        //        this.path.Text = fd.SelectedPath;
+        //    }     
 
-        }
+        //}
     }
 }
